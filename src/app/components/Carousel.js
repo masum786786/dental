@@ -26,7 +26,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative w-full h-screen" data-carousel="static">
+    <div className="relative w-full h-screen" data-carousel="static" style={{height:'400px'}}>
       <div className="relative h-full overflow-hidden rounded-lg">
         {items.map((item, index) => (
           <div

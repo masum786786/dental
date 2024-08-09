@@ -1,6 +1,8 @@
 'use client'
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import logo from '@/app/assets/logo.jpeg'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,13 +14,17 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
       <div className="container mx-auto flex justify-between items-center py-6 px-4">
-        <div className="flex items-center">
+        <div className="flex items-center space-x-2">
           <Link href="/" passHref>
-            <h1 className="text-2xl font-bold text-blue-800 cursor-pointer" style={{ fontFamily: "cursive" }}>
-              Dental Life Line
-            </h1>
+            <div className="flex items-center">
+              <Image src={logo} alt="Dental Life Line Logo" width={64} height={64} className="cursor-pointer" />
+              <h1 className="text-2xl font-bold text-blue-800 ml-2 cursor-pointer" style={{ fontFamily: "cursive" }}>
+                Dental Life Line
+              </h1>
+            </div>
           </Link>
         </div>
+
         <ul className="hidden md:flex space-x-4 md:space-x-8">
           <li><Link href="/" className="text-gray-800 hover:text-blue-800">Home</Link></li>
           <li><Link href="/links/about" className="text-gray-800 hover:text-blue-800">About</Link></li>
