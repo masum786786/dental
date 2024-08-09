@@ -35,7 +35,7 @@ const Carousel = () => {
             style={{ transform: 'translate(-50%, -50%)', top: '50%', left: '50%' }}
             data-carousel-item={index === activeIndex ? 'active' : ''}
           >
-            <Image src={item} alt={`Carousel item ${index + 1}`} className="block w-full h-full object-cover" />
+            <Image src={item} alt={`Carousel item ${index + 1}`} className="block w-full h-full object-cover" style={{width:'100%',height:'100%'}}/>
           </div>
         ))}
       </div>

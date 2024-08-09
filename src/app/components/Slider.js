@@ -41,32 +41,28 @@ const cardData = [
 ];
 
 const Slider = () => {
-    return (
-      <div className="container mx-auto p-4">
-        {/* <h2 className="text-xl md:text-2xl text-center mb-4 md:mb-10 font-semibold">What other practices say...</h2> */}
-        <section className="slider-section flex overflow-x-scroll space-x-4">
-          {cardData.map((card, index) => (
-            <div
-              key={index}
-              className="min-w-[50%] md:min-w-[40%] bg-white shadow-md rounded-lg p-4 flex flex-col items-center space-y-2"
-            >
-              <div className="text-4xl">
-                {typeof card.Image === 'string' ? (
-                  card.Image
-                ) : (
-                  <Image src={card.Image} alt={card.title} className="w-16 h-16" />
-                )}
-              </div>
-              <h2 className="text-xl font-semibold">{card.title}</h2>
-              <p className="text-gray-500">{card.subtitle}</p>
+  return (
+    <div className="container mx-auto p-4 h-[80vh]">
+      <section className="slider-section flex overflow-x-scroll space-x-4 h-full">
+        {cardData.map((card, index) => (
+          <div
+            key={index}
+            className="min-w-[100%] md:min-w-[40%] bg-white shadow-md rounded-lg p-4 flex flex-col items-center space-y-2"
+          >
+            <div className="text-4xl">
+              {typeof card.Image === 'string' ? (
+                card.Image
+              ) : (
+                <Image src={card.Image} alt={card.title} className="w-16 h-16" />
+              )}
             </div>
-          ))}
-        </section>
-      </div>
-    );
-  };
-  
-  export default Slider;
-  
-  
-  
+            <h2 className="text-xl font-semibold">{card.title}</h2>
+            <p className="text-gray-500">{card.subtitle}</p>
+          </div>
+        ))}
+      </section>
+    </div>
+  );
+};
+
+export default Slider;
