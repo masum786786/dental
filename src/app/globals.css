@@ -31,3 +31,24 @@ body {
     text-wrap: balance;
   }
 }
+
+.Carousel.Image{
+  height: inherit;
+}
+
+.slider-section {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
+}
+
+.slider-section::-webkit-scrollbar {
+  display: none; 
+}
+.h2{
+  font-size: 2.44rem;
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--color-navy);
+  font-style: normal;
+
+}
