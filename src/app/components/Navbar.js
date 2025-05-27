@@ -52,7 +52,7 @@ const Navbar = () => {
   
     {/* Mobile Menu */}
     {isOpen && (
-      <div className="md:hidden bg-white shadow-md mt-[78px]">
+      <div className="md:hidden bg-white shadow-md ">
         <ul className="flex flex-col space-y-4 p-4">
           <li><Link href="/" className="text-gray-800 hover:text-blue-800 ">Home</Link></li>
           <li><Link href="/links/about" className="text-gray-800 hover:text-blue-800 ">About</Link></li>
