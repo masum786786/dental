@@ -32,6 +32,56 @@ body {
   }
 }
 
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  z-index: 1;
+  margin-top: 475px;
+    margin-left: 30px;
+}
+.book-now-button {
+  padding: 12px 24px;
+  background-color: #2563eb; /* Tailwind's blue-600 */
+  color: white;
+
+  font-weight: 600;
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* transition: background-color 0.3s ease; */
+  border: none;
+  cursor: pointer;
+
+  animation-name: bookNow;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+
+
+}
+@keyframes bookNow {
+  from{
+    background-color: #2563eb;
+    font-size: 1rem;
+  }
+  to{
+    background-color: chocolate;
+    font-size: 1.2rem;
+  }
+}
+
+.input {
+  border: 1px solid none !important;
+}
+
+/* .book-now-button:hover {
+  background-color: #1d4ed8; 
+} */
+
 .Carousel.Image{
   height: inherit;
 }
@@ -51,4 +101,50 @@ body {
   color: var(--color-navy);
   font-style: normal;
 
+}
+.container{
+  width: 100%;
+  padding: 10px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  justify-self: center;
+}
+.card{
+  width: 400px;
+  height: 350px;
+  padding: 10px;
+  /* border: 2px solid limegreen; */
+  box-shadow: 0 4px 8px whitesmoke;
+  background-color:rgb(167, 219, 219);
+  margin-bottom: 1.5rem; 
+  transition: 2s;
+}
+.card:hover{
+  background-color:bisque;
+}
+.card-title{
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 23px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.card-des{
+  text-align:start;
+  font-family: sans-serif;
+  /* font-weight: 600; */
+ padding: 5px;
+}
+.card-img{
+  /* justify-content: center; */
+  justify-self:center ;
+  border-radius: 30px;
+
+}
+
+.img-profile{
+  border-radius: 30%;
+  box-shadow: 0 4px 8px whitesmoke;
 }

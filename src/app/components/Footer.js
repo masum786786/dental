@@ -26,6 +26,7 @@ const Footer = () => {
             <p>Near JP Chowk Station Road Mirganj</p>
             <p>Email: info@dentalclinic.com</p>
             <p>Phone: 9456231226</p>
+            <p> ...</p>
           </div>
         </div>
         <div className="text-center mt-8">
