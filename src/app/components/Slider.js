@@ -10,92 +10,72 @@ import { Container } from 'postcss';
 
 const Slider = () => {
   return (
-    <div className="container ">
-       <div className='card'>
-        {/* <Image src="/Cosmetic.png"  width={50} height={50} /> */}
-        <Image
-          src={care}
-          alt="Cosmetic "
-          style={{ width: '30%', height: '30%' }}
-          className='card-img'
-        />
-        <div>
-          <h2 className='card-title'> Exceptional Dental Care</h2>
-          <p className='card-des'> Let the root canal dentists at Story Dental provide you with the care you need to alleviate tooth pain and to save your smile. A root canal will treat the diseased tissue (pulp) while preserving the rest of the tooth. Studies show that bacteria from a diseased root canal can cause almost any type of illness such as arthritis, heart disease, kidney disease and others. </p>
-        </div>
+    <div className="w-full px-4 py-14 bg-gradient-to-b from-blue-50 to-white">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      </div>
-      <div className='card'>
-        {/* <Image src="/Cosmetic.png"  width={50} height={50} /> */}
-        <Image
-          src={dentistry}
-          alt="Cosmetic "
-          style={{ width: '30%', height: '30%' }}
-          className='card-img'
-        />
-        <div>
-          <h2 className='card-title'> General Dentistry</h2>
-          <p className='card-des'> Choose our team at Story Dental as your general dentist in Irving. We are primary care dentists here to diagnose, treat and manage your oral health, including gum care, root canals, fillings, crowns, veneers, bridges, and preventive education.</p>
-        </div>
+        {/* Card Template */}
+        {[
+          {
+            img: care,
+            title: "Exceptional Dental Care",
+            desc: "Let the root canal dentists at Story Dental provide you with the care you need to alleviate tooth pain and save your smile."
+          },
+          {
+            img: dentistry,
+            title: "General Dentistry",
+            desc: "We diagnose, treat, and manage oral health, including gum care, fillings, crowns, veneers, and more."
+          },
+          {
+            img: Cosmetic,
+            title: "Cosmetic Dentistry",
+            desc: "We improve smile aesthetics such as color, shape, alignment, and overall appearance."
+          },
+          {
+            img: ortho,
+            title: "Orthodontics",
+            desc: "We straighten teeth and correct bites using traditional and Invisalign methods."
+          },
+          {
+            img: Root,
+            title: "Root Canals",
+            desc: "A root canal removes diseased tissue while preserving the remaining tooth for a healthy smile."
+          },
+          {
+            img: Implants,
+            title: "Dental Implants",
+            desc: "Live confidently with natural-feeling, strong dental implants that replace missing teeth."
+          }
+        ].map((item, i) => (
+          <div
+            key={i}
+            className="bg-white/60 backdrop-blur-xl border border-white/40 shadow-xl rounded-2xl p-7 text-center 
+        hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 group"
+          >
+            <div className="flex justify-center mb-4">
+              <Image
+                src={item.img}
+                alt={item.title}
+                className="w-20 h-20 object-contain drop-shadow-md group-hover:scale-110 transition-all duration-300"
+              />
+            </div>
 
-      </div>
-      <div className='card'>
-        {/* <Image src="/Cosmetic.png"  width={50} height={50} /> */}
-        <Image
-          src={Cosmetic}
-          alt="Cosmetic "
-          style={{ width: '30%', height: '30%' }}
-          className='card-img'
-        />
-        <div>
-          <h2 className='card-title'> Cosmetic Dentistry</h2>
-          <p className='card-des'> Story Dental provides cosmetic dentistry in Irving. Our services primarily focus on improving dental aesthetics such as color, position, shape, size, alignment, and overall smile appearance. Smile with confidence. You deserve it. </p>
-        </div>
+            <h2 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition">
+              {item.title}
+            </h2>
 
-      </div>
-      <div className='card'>
-        {/* <Image src="/Cosmetic.png"  width={50} height={50} /> */}
-        <Image
-          src={ortho}
-          alt="Cosmetic "
-          style={{ width: '30%', height: '30%' }}
-          className='card-img'
-        />
-        <div>
-          <h2 className='card-title'> Orthodontics</h2>
-          <p className='card-des'> Our orthodontic services in Irving focus on straighten your teeth, correcting your bite and malocclusion. We provide both traditional methods as well as Invisalign to give you the smile you’ve been waiting for on your time and budget. </p>
-        </div>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              {item.desc}
+            </p>
 
-      </div>
-      <div className='card'>
-        {/* <Image src="/Cosmetic.png"  width={50} height={50} /> */}
-        <Image
-          src={Root}
-          alt="Cosmetic "
-          style={{ width: '30%', height: '30%' }}
-          className='card-img'
-        />
-        <div>
-          <h2 className='card-title'> Root Canals</h2>
-          <p className='card-des'> Let the root canal dentists at Story Dental provide you with the care you need to alleviate tooth pain and to save your smile. A root canal will treat the diseased tissue (pulp) while preserving the rest of the tooth. Studies show that bacteria from a diseased root canal can cause almost any type of illness such as arthritis, heart disease, kidney disease and others.</p>
-        </div>
-
-      </div>
-      <div className='card'>
-        {/* <Image src="/Cosmetic.png"  width={50} height={50} /> */}
-        <Image
-          src={Implants}
-          alt="Cosmetic "
-          style={{ width: '30%', height: '30%' }}
-          className='card-img'
-        />
-        <div>
-          <h2 className='card-title'> Dental Implants</h2>
-          <p className='card-des'> Dental implants allow you to live the way you want to – confidently eating, smiling, laughing, talking, kissing, and enjoying all of your everyday activities without worrying about your teeth. Our Irving Dentists are dedicated to providing you with the strongest, most natural feeling smile. Dental implants are a great way to replace missing teeth. </p>
-        </div>
-
+            <button className="mt-5 px-5 py-2 rounded-full bg-blue-600 text-white font-medium text-sm 
+          shadow-md hover:bg-blue-700 transition-all">
+              Learn More
+            </button>
+          </div>
+        ))}
       </div>
     </div>
+
   );
 };
 

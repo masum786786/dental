@@ -12,6 +12,8 @@ import dr1 from "@/app/assets/dr1.jpeg";
 import dr2 from "@/app/assets/dr2.jpeg";
 import patient from "@/app/assets/patient.jpg"
 import Carousel from "@/app/components/Carousel"
+import Location from "@/app/components/Location"
+
 
 
 
@@ -47,6 +49,7 @@ const Page = () => {
       <BorderSection/>
 
       <BodySection />
+      <Location/>
       <Footer />
     </div>
   );

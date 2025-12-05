@@ -21,78 +21,90 @@ const UserForm = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-6 text-center">Patient Information Form</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Patient Name</label>
-          <input
-            type="text"
-            name="patientName"
-            value={formData.patientName}
-            onChange={handleChange}
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-            placeholder="Enter Patient Name"
-            required
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Age</label>
-          <input
-            type="number"
-            name="age"
-            value={formData.age}
-            onChange={handleChange}
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-            placeholder="Enter Age"
-            required
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Mobile Number</label>
-          <input
-            type="text"
-            name="mobileNumber"
-            value={formData.mobileNumber}
-            onChange={handleChange}
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-            placeholder="Enter Mobile Number"
-            required
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Village</label>
-          <input
-            type="text"
-            name="village"
-            value={formData.village}
-            onChange={handleChange}
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-            placeholder="Enter Village"
-            required
-          />
-        </div>
-        {/* <div>
-          <label className="block text-sm font-medium text-gray-700">Describe Problem</label>
-          <textarea
-            name="problemDescription"
-            value={formData.problemDescription}
-            onChange={handleChange}
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-            placeholder="Describe the problem"
-            rows="4"
-            required
-          ></textarea>
-        </div> */}
-        <div className="text-center">
-          <button
-            type="submit"
-            className="px-4 py-2 bg-blue-500 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75"
-          >
-            Submit
-          </button>
-        </div>
-      </form>
+    <div className="w-full min-h-screen flex items-center justify-center bg-gray-100 py-10 px-4">
+      <div className="w-full md:w-2/3 lg:w-1/2 bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+        <h2 className="text-3xl font-bold mb-8 text-center text-blue-600 tracking-wide">
+          Patient Information Form
+        </h2>
+
+        <form onSubmit={handleSubmit} className="space-y-5">
+          
+          {/* Patient Name */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Patient Name <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              name="patientName"
+              value={formData.patientName}
+              onChange={handleChange}
+              required
+              className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+              placeholder="Enter Patient Name"
+            />
+          </div>
+
+          {/* Age */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Age <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="number"
+              name="age"
+              value={formData.age}
+              onChange={handleChange}
+              required
+              className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+              placeholder="Enter Age"
+            />
+          </div>
+
+          {/* Mobile Number */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Mobile Number <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              name="mobileNumber"
+              value={formData.mobileNumber}
+              onChange={handleChange}
+              required
+              className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+              placeholder="Enter Mobile Number"
+            />
+          </div>
+
+          {/* Village */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Village <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              name="village"
+              value={formData.village}
+              onChange={handleChange}
+              required
+              className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+              placeholder="Enter Village"
+            />
+          </div>
+
+          {/* Submit Button */}
+          <div className="text-center pt-4">
+            <button
+              type="submit"
+              className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl shadow-md hover:bg-blue-700 transition-all focus:outline-none focus:ring-2 focus:ring-blue-400"
+            >
+              Submit
+            </button>
+          </div>
+
+        </form>
+      </div>
     </div>
   );
 };

@@ -7,48 +7,72 @@ import cr3 from "@/app/assets/cr3.jpg"
 
 const BodySection = () => {
   return (
-    <div className="container mx-auto my-8 p-4 px-8">
+    <div className=" mx-auto my-3 p-3 md:p-10">
+
       {/* First Section */}
-      <div className="flex flex-col md:flex-row md:space-x-8">
-        <div className="md:w-1/2 order-2 md:order-1 mb-8 md:mb-0">
-          <h2 className="text-xl md:text-2xl text-center mb-4 md:mb-10 font-semibold">
+      <div className="flex flex-col md:flex-row md:space-x-12 items-center bg-white/70 backdrop-blur-xl p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+        
+        {/* TEXT */}
+        <div className="md:w-1/2 order-2 md:order-1 mb-6 md:mb-0">
+          <h2 className="text-2xl md:text-3xl mb-4 md:mb-8 font-bold text-gray-800 leading-snug">
             What can I do to prevent losing teeth in the future?
           </h2>
-          <p className="text-base md:text-lg mb-4 font-sans">
-            While missing teeth can be caused by genetic factors and other things outside of your control, there are some behavioral and lifestyle changes you can make to limit the risk of losing a tooth:
+
+          <p className="text-gray-600 text-base md:text-lg mb-4 font-sans leading-relaxed">
+            While missing teeth can be caused by genetic factors and other things outside of your control, here are some healthy habits to reduce your risk:
           </p>
-          <ul className="list-disc list-inside space-y-2">
-            <li>Eat a healthy, unprocessed diet and avoid overly acidic or difficult-to-eat foods</li>
-            <li>Practice consistent daily dental hygiene by brushing and flossing daily</li>
-            <li>Visit us for regular cleanings and exams</li>
+
+          <ul className="list-disc list-inside space-y-2 text-gray-700 text-base md:text-lg">
+            <li>Eat a healthy, unprocessed diet and avoid acidic foods</li>
+            <li>Practice consistent daily dental hygiene</li>
+            <li>Visit us for regular cleanings & exams</li>
             <li>Avoid smoking</li>
-            <li>Take care of your overall health and well-being, especially if you suffer from diabetes or other chronic health conditions</li>
+            <li>Maintain overall health, especially with chronic conditions</li>
           </ul>
         </div>
+
+        {/* IMAGE */}
         <div className="md:w-1/2 order-1 md:order-2 flex justify-center">
-          <Image src={patient} alt="Dental Clinic" className="rounded-lg shadow-md" />
+          <Image
+            src={patient}
+            alt="Dental Clinic"
+            className="rounded-xl shadow-xl hover:scale-105 transition-transform duration-300"
+          />
         </div>
       </div>
 
       {/* Second Section */}
-      <div className="flex flex-col md:flex-row md:space-x-8 mt-10 md:mt-20">
+      <div className="flex flex-col md:flex-row md:space-x-12 items-center mt-16 bg-gradient-to-r from-blue-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+
+        {/* IMAGE */}
         <div className="md:w-1/2 order-2 md:order-1 flex justify-center mb-8 md:mb-0">
-          <Image src={cr3} alt="Dental Clinic" className="rounded-lg shadow-md" style={{ height: "350px" }} />
+          <Image
+            src={cr3}
+            alt="Dental Technology"
+            className="rounded-xl shadow-xl hover:scale-105 transition-transform duration-300"
+            style={{ height: "350px" }}
+          />
         </div>
+
+        {/* TEXT */}
         <div className="md:w-1/2 order-1 md:order-2">
-          <h2 className="text-xl md:text-2xl mb-4 md:mb-10 font-semibold">
+          <h2 className="text-2xl md:text-3xl mb-4 md:mb-8 font-bold text-gray-800 leading-snug">
             Using Various Modern Technology
           </h2>
-          <p className="text-base md:text-lg mb-4 font-sans">
-            At our dental clinic, we are committed to providing exceptional dental care in a comfortable and friendly environment. Our team of experienced professionals uses the latest technology and techniques to ensure your visit is as efficient and effective as possible.
+
+          <p className="text-gray-600 text-base md:text-lg mb-4 leading-relaxed">
+            At our dental clinic, we are committed to providing exceptional dental care in a warm and welcoming environment. Our experienced team uses advanced technology to ensure accuracy and comfort.
           </p>
-          <p className="text-base md:text-lg mb-4 font-sans">
-            Whether you need a routine cleaning, cosmetic dentistry, or more complex procedures, we are here to help. Your oral health is our top priority, and we strive to make every visit a positive experience.
+
+          <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+            Whether you need routine cleaning, cosmetic dentistry, or complex procedures, we ensure a smooth, friendly, and professional experience every time.
           </p>
         </div>
       </div>
+
     </div>
   );
 };
+
 
 export default BodySection
