@@ -2,7 +2,7 @@ import React from 'react';
 
 const TopContent = () => {
     return (
-        <div className="bg-blue-500 py-14 text-white mt-6">
+        <div className="bg-blue-500 py-14 text-white ">
             <h2 className="text-4xl font-bold text-center mb-8 tracking-wide">
                 Our Expertise
             </h2>

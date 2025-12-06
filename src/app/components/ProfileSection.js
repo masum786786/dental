@@ -4,7 +4,7 @@ import dr2 from '@/app/assets/dr2.jpeg'
 
 const ProfileSection = () => {
   return (
-    <div className="w-full mb-3">
+    <div className="w-full ">
 
       <div className="flex flex-col md:flex-row items-center md:space-x-10 bg-white shadow-xl rounded-none p-8 md:p-12 hover:shadow-2xl transition-all duration-300 w-full">
         
@@ -21,7 +21,7 @@ const ProfileSection = () => {
             restorative and cosmetic procedures.
             <br /><br />
             His patient-centered approach ensures personalized care tailored to each 
-            individual's unique needs, helping them achieve optimal oral health and 
+            individual&apos;s unique needs, helping them achieve optimal oral health and 
             a confident smile.
             <br /><br />
             Dr. Azad stays updated with the latest advancements in dentistry, ensuring 
